@@ -111,14 +111,61 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <!-- Config for explicit call transfer support for an IMS call -->
         <boolean name="carrier_allow_transfer_ims_call_bool" value="true" />
         <long name="carrier_data_call_apn_retry_after_disconnect_long" value="100" />
+       
         <!-- Config to enable the example android location attribution app by default -->
         <string name="gps.nfw_proxy_apps">com.example.android.locationattribution</string>
         <boolean name="carrier_cross_sim_ims_available_bool" value="true" />
         <!-- Config for B2C Enriched Calls Feature support -->
         <boolean name="carrier_b2c_enriched_calling_supported_bool" value="false"/>
         <boolean name="carrier_call_progress_notification" value="true" />
+        
+        <!-- Force CA "+" Icon Triggering Globally -->
         <boolean name="hide_lte_plus_data_icon_bool" value="false" />
         <int name="lte_plus_threshold_bandwidth_khz_int" value="0"/>
+        
+        <!-- Global IMS (VoLTE / VoWiFi) Defaults -->
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="editable_wfc_mode_bool" value="true" />
+        <boolean name="editable_wfc_roaming_mode_bool" value="true" />
+        <boolean name="carrier_wfc_supports_ims_preferred_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" /> <!-- 2 = Wi-Fi preferred -->
+    </carrier_config>
+    
+    <!-- MTN Nigeria (MCC 621, MNC 30) -->
+    <carrier_config mcc="621" mnc="30">
+        <boolean name="hide_lte_plus_data_icon_bool" value="false" />
+        <int name="lte_plus_threshold_bandwidth_khz_int" value="0" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="editable_wfc_mode_bool" value="true" />
+    </carrier_config>
+
+    <!-- Airtel Nigeria (MCC 621, MNC 20) -->
+    <carrier_config mcc="621" mnc="20">
+        <boolean name="hide_lte_plus_data_icon_bool" value="false" />
+        <int name="lte_plus_threshold_bandwidth_khz_int" value="0" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="editable_wfc_mode_bool" value="true" />
+    </carrier_config>
+
+    <!-- Glo Nigeria (MCC 621, MNC 50) -->
+    <carrier_config mcc="621" mnc="50">
+        <boolean name="hide_lte_plus_data_icon_bool" value="false" />
+        <int name="lte_plus_threshold_bandwidth_khz_int" value="0" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="editable_wfc_mode_bool" value="true" />
+    </carrier_config>
+
+    <!-- 9mobile Nigeria (MCC 621, MNC 60) -->
+    <carrier_config mcc="621" mnc="60">
+        <boolean name="hide_lte_plus_data_icon_bool" value="false" />
+        <int name="lte_plus_threshold_bandwidth_khz_int" value="0" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="editable_wfc_mode_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="001" mnc="01">

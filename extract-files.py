@@ -95,6 +95,8 @@ blob_fixups: blob_fixups_user_type = {
         blob_fixup().replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so'),
     'vendor/lib64/libwvhidl.so':
         blob_fixup().replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so'),
+    'vendor/lib64/camera/components/com.qti.node.xiaomigenderage.so':
+        blob_fixup().binary_regex_replace(b'\xdb\x0a\x00\xb4', b'\x56\x00\x00\x14'),
 }
 
 module = ExtractUtilsModule(
