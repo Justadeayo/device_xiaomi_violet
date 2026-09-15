@@ -26,7 +26,7 @@ WITH_GAPPS := true
 WITH_GMS_COMMS_SUITE := false
 
 PRODUCT_COPY_FILES += \
-      vendor/gms/common/proprietary/product/etc/permissions/com.google.android.dialer.support.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.dialer.support.xml
+      vendor/pixel/gms/common/proprietary/product/etc/permissions/com.google.android.dialer.support.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.dialer.support.xml
 
 PRODUCT_PACKAGES += \
       GoogleDialer \
