@@ -1086,7 +1086,7 @@ vendor/etc/thermal-engine.conf
 vendor/lib64/libthermalfeature.so
 
 # Thermal Engine - from Xiaomi
-vendor/etc/thermal-engine-normal.conf|7a7456de90201e7e410210d78d08dae428ba6dcf
+vendor/etc/thermal-engine-normal.conf|a75269ddf794fe786391bbf815186e3b22d0bb0a
 
 # Thermal (init script) - from LA.UM.8.9.r1-07100-SM6xx.0
 vendor/etc/init/init_thermal-engine.rc|f0d14aa4734b2e8afd61a4eed73238187b268f48
