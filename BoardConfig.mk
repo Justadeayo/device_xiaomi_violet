@@ -66,7 +66,8 @@ TARGET_KERNEL_CLANG_COMPILE := true
 BOARD_RAMDISK_OFFSET := 0x01000000
 
 KERNEL_CLANG_TRIPLE := CLANG_TRIPLE=aarch64-linux-gnu-
-KERNEL_CC := CC=clang
+KERNEL_CC := CC=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-r416183b/bin/clang
+TARGET_KERNEL_CLANG_VERSION := r416183b
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
