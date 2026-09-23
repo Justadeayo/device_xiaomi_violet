@@ -60,22 +60,30 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-TARGET_KERNEL_SOURCE := kernel/xiaomi/violet
-TARGET_KERNEL_CONFIG := vendor/violet-perf_defconfig vendor/debugfs.config
-TARGET_KERNEL_CLANG_COMPILE := true
 BOARD_RAMDISK_OFFSET := 0x01000000
 
-KERNEL_CLANG_TRIPLE := CLANG_TRIPLE=aarch64-linux-gnu-
-KERNEL_CC := CC=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-r416183b/bin/clang
-TARGET_KERNEL_CLANG_VERSION := r416183b
+# Prebuilt_Kernel
+TARGET_KERNEL_VERSION := 4.14
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/kernel/Image.gz-dtb
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/kernel/dtbo.img
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/kernel
+# --------------------------------------------------------------------------------------
+# TARGET_KERNEL_SOURCE := kernel/xiaomi/violet
+# TARGET_KERNEL_CONFIG := vendor/violet-perf_defconfig vendor/debugfs.config
+# TARGET_KERNEL_CLANG_COMPILE := true
 
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
-    LLVM=1 \
-    LLVM_IAS=1 \
-    CROSS_COMPILE_ARM32=$(shell pwd)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
-    KCFLAGS="-Wno-error -Wno-unused-command-line-argument" \
-    HOSTCFLAGS="-fuse-ld=lld -Wno-error -Wno-unused-command-line-argument"
+# KERNEL_CLANG_TRIPLE := CLANG_TRIPLE=aarch64-linux-gnu-
+# KERNEL_CC := CC=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-r416183b/bin/clang
+# TARGET_KERNEL_CLANG_VERSION := r416183b
+
+# TARGET_KERNEL_ADDITIONAL_FLAGS := \
+#    DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
+#    LLVM=1 \
+#    LLVM_IAS=1 \
+#    CROSS_COMPILE_ARM32=$(shell pwd)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
+#    KCFLAGS="-Wno-error -Wno-unused-command-line-argument" \
+#    HOSTCFLAGS="-fuse-ld=lld -Wno-error -Wno-unused-command-line-argument"
+# --------------------------------------------------------------------------------------
 
 # Platform
 TARGET_BOARD_PLATFORM := sm6150
