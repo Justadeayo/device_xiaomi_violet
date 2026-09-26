@@ -70,21 +70,23 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 
 # -------------------------------------------------------------------------------------
 # Inline_Kernel_Build
- TARGET_KERNEL_SOURCE := kernel/xiaomi/violet
- TARGET_KERNEL_CONFIG := vendor/violet-perf_defconfig vendor/debugfs.config
- TARGET_KERNEL_CLANG_COMPILE := true
- TARGET_KERNEL_VERSION := 4.14
+TARGET_KERNEL_SOURCE := kernel/xiaomi/violet
+TARGET_KERNEL_CONFIG := vendor/violet-perf_defconfig vendor/debugfs.config
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_VERSION := 4.14
 
- KERNEL_CLANG_TRIPLE := CLANG_TRIPLE=aarch64-linux-gnu-
- KERNEL_CC := CC=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-r416183b/bin/clang
- TARGET_KERNEL_CLANG_VERSION := r416183b
+KERNEL_CLANG_TRIPLE := CLANG_TRIPLE=aarch64-linux-gnu-
+KERNEL_CC := CC=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-r416183b/bin/clang
+TARGET_KERNEL_CLANG_VERSION := r416183b
 
- TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
-    LLVM=1 \
-    LLVM_IAS=1 \
-    KCFLAGS="-Wno-error -Wno-unused-command-line-argument" \
-    HOSTCFLAGS="-fuse-ld=lld -Wno-error -Wno-unused-command-line-argument"
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+   DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
+   LLVM=1 \
+   LLVM_IAS=1 \
+   KCFLAGS="-Wno-error -Wno-unused-command-line-argument" \
+   HOSTCFLAGS="-fuse-ld=lld -Wno-error -Wno-unused-command-line-argument"
+    
+CROSS_COMPILE_ARM32 := arm-linux-gnueabi-
 # --------------------------------------------------------------------------------------
 
 # Platform
