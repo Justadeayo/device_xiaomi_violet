@@ -80,13 +80,14 @@ KERNEL_CC := CC=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-r416183b/bin/c
 TARGET_KERNEL_CLANG_VERSION := r416183b
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
-   DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
-   LLVM=1 \
-   LLVM_IAS=1 \
-   CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
-   KCFLAGS="-Wno-error -Wno-unused-command-line-argument" \
-   HOSTCFLAGS="-fuse-ld=lld -Wno-error -Wno-unused-command-line-argument" 
-   
+    DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
+    LLVM=1 \
+    LLVM_IAS=1 \
+    CROSS_COMPILE=aarch64-linux-gnu- \
+    CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
+    KCFLAGS="-Wno-error -Wno-unused-command-line-argument" \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-error -Wno-unused-command-line-argument"
+       
 # --------------------------------------------------------------------------------------
 
 # Platform
