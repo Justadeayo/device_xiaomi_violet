@@ -23,6 +23,9 @@ $(call inherit-product, vendor/xiaomi/violet/violet-vendor.mk)
 # Setup Viper4AndroidFX 
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
+# Include BCR
+$(call inherit-product, vendor/bcr/bcr.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
