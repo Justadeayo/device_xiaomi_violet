@@ -1,0 +1,3 @@
+get_prop(audioserver, vendor_audio_prop)
+allow audioserver unlabeled:file { read write open getattr };
+allow hal_audio_default self:process { execmem };
