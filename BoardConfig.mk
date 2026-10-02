@@ -75,6 +75,10 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     KCFLAGS="-Wno-error -Wno-unused-command-line-argument" \
     HOSTCFLAGS="-Wno-unused-command-line-argument"
 
+# MSM Kernel Headers
+INLINE_KERNEL_BUILDING := true
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+
 # Platform
 TARGET_BOARD_PLATFORM := sm6150
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno612
