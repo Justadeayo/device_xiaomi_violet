@@ -23,5 +23,25 @@
     <string name="clear_speaker_title">Clear speaker</string>
     <string name="clear_speaker_summary">Play a 60-second audio to clear the speaker</string>
     <string name="clear_speaker_description">Run this feature once or twice if you find that your speaker is lightly blocked by dust. Set media volume to maximum.\n\nIf the speaker is blocked heavily, run this feature 2-5 times while shaking your device with the speaker facing downwards.\n\nWARNING: Ensure that any headphones are unplugged.</string>
+    
+    <!-- Device settings -->
+    <string name="device_settings_app_name">Device settings</string>
+    <string name="dialog_ok">OK</string>
+
+    <!-- Doze / Ambient display -->
+    <string name="ambient_display_title">Ambient display</string>
+    <string name="ambient_display_enable_title">Enable ambient display</string>
+    <string name="ambient_display_always_on_title">Always on display</string>
+    <string name="ambient_display_always_on_summary">Keep the display on with minimal information while the device is idle</string>
+    <string name="pick_up_gesture_title">Pick-up gesture</string>
+    <string name="pick_up_gesture_summary">Wake the ambient display when you pick up the device</string>
+    <string name="hand_wave_gesture_title">Hand wave gesture</string>
+    <string name="hand_wave_gesture_summary">Wake the ambient display when you wave your hand over the proximity sensor</string>
+    <string name="pocket_gesture_title">Pocket gesture</string>
+    <string name="pocket_gesture_summary">Wake the ambient display when you take the device out of a pocket</string>
+    <string name="pickup_sensor_title">Pick-up sensor</string>
+    <string name="proximity_sensor_title">Proximity sensor</string>
+    <string name="doze_settings_help_title">Doze settings help</string>
+    <string name="doze_settings_help_text">Doze reduces battery use by limiting background activity while the device is idle. Choose when the screen wakes for new notifications and the pick-up gesture.</string>
 
 </resources>
