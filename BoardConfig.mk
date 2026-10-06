@@ -68,17 +68,10 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/violet
 TARGET_KERNEL_CONFIG := vendor/violet-perf_defconfig vendor/debugfs.config
 TARGET_KERNEL_CLANG_COMPILE := true
 
-KERNEL_CLANG_TRIPLE := CLANG_TRIPLE=aarch64-linux-gnu-
-KERNEL_CC := CC=clang
-
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
-    LLVM=1 \
-    LLVM_IAS=1 \
     CROSS_COMPILE=aarch64-linux-gnu- \
-    KCFLAGS="-Wno-error -Wno-unused-command-line-argument" \
-    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
-
+    KCFLAGS="-Wno-error -Wno-unused-command-line-argument"
+    
 # MSM Kernel Headers
 INLINE_KERNEL_BUILDING := true
 TARGET_COMPILE_WITH_MSM_KERNEL := true
