@@ -44,6 +44,11 @@ TARGET_INCLUDE_PIXEL_CHARGER := true
 TARGET_CAMERA_PACKAGE_NAME := com.android.camera
 $(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
+# Remove Packages 
+PRODUCT_PACKAGES -= \
+      Velvet \
+      PrebuiltGmail
+
 # Disable UDFPS animations ( unsupported )
 EXTRA_UDFPS_ICONS := false
 
