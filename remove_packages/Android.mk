@@ -41,6 +41,8 @@ LOCAL_OVERRIDES_PACKAGES := \
     OBDM_Permissions \
     OdadPrebuilt \
     Photos \
+    PrebuiltGmail \
+    PrebuiltBugle \
     PixelSupportPrebuilt \
     PlayAutoInstallConfig \
     PrebuiltPixelCoreServices \
