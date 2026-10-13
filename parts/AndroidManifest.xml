@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015-2016 The CyanogenMod Project
-                   2017-2023 The LineageOS Project
+                   2017-2018 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="org.lineageos.settings"
     android:versionCode="1"
     android:versionName="1.0"
@@ -26,32 +27,60 @@
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="30" />
+
     <application
         android:label="@string/device_settings_app_name"
         android:persistent="true"
         android:theme="@style/Theme.SubSettingsBase.Expressive">
 
-        <receiver android:name=".BootCompletedReceiver"
-                  android:exported="false">
-            <intent-filter>
+        <receiver android:name=".BootCompletedReceiver">
+            <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
         <service android:name=".doze.DozeService"
-                 android:permission="XiaomiDozeService"
-                 android:exported="true">
+                 android:permission="XiaomiDozeService">
+        </service>
+
+        <service
+            android:name=".fpsinfo.FPSInfoService"
+            android:exported="false">
+        </service>
+
+        <service
+            android:name=".fpsinfo.FPSTileService"
+            android:icon="@drawable/ic_fps"
+            android:label="@string/fps_info_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
         </service>
 
         <activity
             android:name=".doze.DozeSettingsActivity"
-            android:exported="false"
             android:label="@string/ambient_display_title">
             <intent-filter>
                 <action android:name="org.lineageos.settings.device.DOZE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".speaker.ClearSpeakerActivity" 
+            android:label="@string/clear_speaker_title"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                       android:value="com.android.settings.category.ia.sound" />
         </activity>
 
     </application>
