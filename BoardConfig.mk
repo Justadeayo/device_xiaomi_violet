@@ -64,4 +64,5 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
+TARGET_SUPPORTS_64_BIT_APPS := true
 include vendor/xiaomi/violet/BoardConfigVendor.mk
