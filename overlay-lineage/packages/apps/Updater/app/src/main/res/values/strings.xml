@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 DerpFest
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- DerpFest Updater URLs 🎖️-->
+    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/Justadeayo/OTA/main/violet.json</string>
+    <string name="menu_changelog_url" translatable="false">https://raw.githubusercontent.com/Justadeayo/OTA/main/changelogs_violet.txt</string>
+    <string name="device_info_url" translatable="false">https://raw.githubusercontent.com/Justadeayo/OTA/main/device-info.json</string>
+    
+</resources>
