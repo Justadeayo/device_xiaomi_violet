@@ -50,9 +50,6 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno612
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
-# Security
-VENDOR_SECURITY_PATCH := 2021-08-01
-
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
