@@ -17,6 +17,7 @@
 DEVICE_PATH := device/xiaomi/violet
 
 # Inherit from proprietary files
+TARGET_SUPPORTS_64_BIT_APPS := true
 include vendor/xiaomi/violet/BoardConfigVendor.mk
 
 # Architecture
