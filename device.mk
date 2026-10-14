@@ -65,7 +65,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     FrameworkOverlayViolet \
-    SettingsOverlayViolet \
     SystemUIOverlayViolet
 
 # Power
@@ -79,3 +78,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Entries below do not exist in the tree; kati fails on them
+PRODUCT_PACKAGES := $(filter-out disable_configstore,$(PRODUCT_PACKAGES))
