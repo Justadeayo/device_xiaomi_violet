@@ -79,7 +79,16 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 
 TARGET_KERNEL_SOURCE := kernel/xiaomi/violet
-TARGET_KERNEL_CONFIG := vendor/sdmsteppe-perf_defconfig vendor/violet.config
+TARGET_KERNEL_CONFIG := vendor/violet-perf_defconfig vendor/debugfs.config
+TARGET_KERNEL_CLANG_COMPILE := true
+
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    CROSS_COMPILE=aarch64-linux-gnu- \
+    KCFLAGS="-Wno-error -Wno-unused-command-line-argument"
+    
+# MSM Kernel Headers
+INLINE_KERNEL_BUILDING := true
+TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x880000
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.fstab_suffix=emmc
