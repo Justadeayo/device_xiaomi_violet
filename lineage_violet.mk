@@ -18,20 +18,50 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit MiuiCamera
 $(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
-# AxionAOSP
-AXION_CAMERA_REAR_INFO := 48,5
-AXION_CAMERA_FRONT_INFO := 13
-AXION_MAINTAINER := Joker-V2
-AXION_PROCESSOR := Qualcomm_Snapdragon_675
+#DerpFest-AOSP
+DERPFEST_BUILD_TYPE := Official
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_NOT_USES_BLUR := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_ACCORD ?= false
+TARGET_SUPPORTS_OMX_SERVICE := false
 BYPASS_CHARGE_SUPPORTED := true
-TARGET_ENABLE_BLUR := true
 TARGET_USES_DOLBY := true
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
+
+#GMS
+WITH_GMS := true
+WITH_GAPPS := true
+WITH_GMS_COMMS_SUITE := false
+
+PRODUCT_COPY_FILES += \
+      vendor/pixel/gms/common/proprietary/product/etc/permissions/com.google.android.dialer.support.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.dialer.support.xml
+
+PRODUCT_PACKAGES += \
+      GoogleDialer \
+      com.google.android.dialer.support
+
+# Bootanimation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+USE_LEGACY_BOOTANIMATION := true
+
+# Charging Animation
+TARGET_INCLUDE_PIXEL_CHARGER := true
+
+# Disable UDFPS animations ( unsupported )
+EXTRA_UDFPS_ICONS := false
+
+# Enable Material Design 3 Expressive
+PRODUCT_PRODUCT_PROPERTIES += \
+    is_expressive_design_enabled=true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_violet
 PRODUCT_DEVICE := violet
-PRODUCT_BRAND := xiaomi
+PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
