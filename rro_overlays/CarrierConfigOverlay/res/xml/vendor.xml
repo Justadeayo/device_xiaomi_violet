@@ -1380,6 +1380,7 @@
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
         <boolean name="carrier_video_crs_supported_bool" value="true" />
         <boolean name="carrier_call_progress_notification" value="true" />
+        <int name="lte_plus_threshold_bandwidth_khz_int" value="0"/>
         <string-array name="carrier_support_video_service_numbers" num="2">
             <item value="0532100860086" />
             <item value="0201008616" />
@@ -1485,6 +1486,7 @@
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
         <boolean name="carrier_video_crs_supported_bool" value="true" />
         <boolean name="carrier_call_progress_notification" value="true" />
+        <int name="lte_plus_threshold_bandwidth_khz_int" value="0"/>
         <string-array name="carrier_support_video_service_numbers" num="2">
             <item value="0532100860086" />
             <item value="0201008616" />
@@ -1664,6 +1666,7 @@
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
         <boolean name="carrier_video_crs_supported_bool" value="true" />
         <boolean name="carrier_call_progress_notification" value="true" />
+        <int name="lte_plus_threshold_bandwidth_khz_int" value="0"/>
         <string-array name="carrier_support_video_service_numbers" num="2">
             <item value="0532100860086" />
             <item value="0201008616" />
@@ -1729,6 +1732,7 @@
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
         <boolean name="carrier_video_crs_supported_bool" value="true" />
         <boolean name="carrier_call_progress_notification" value="true" />
+        <int name="lte_plus_threshold_bandwidth_khz_int" value="0"/>
         <string-array name="carrier_support_video_service_numbers" num="2">
             <item value="0532100860086" />
             <item value="0201008616" />
@@ -1918,6 +1922,7 @@
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
         <boolean name="carrier_video_crs_supported_bool" value="true" />
         <boolean name="carrier_call_progress_notification" value="true" />
+        <int name="lte_plus_threshold_bandwidth_khz_int" value="0"/>
         <boolean name="carrier_support_send_media_configs_to_radio_layer_bool" value="true" />
         <int-array name="carrier_nr_availabilities_int_array" num="1">
             <item value="1" />
