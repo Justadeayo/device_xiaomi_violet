@@ -67,4 +67,4 @@ PRODUCT_PRODUCT_PROPERTIES += \
    ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-https://github.com/Justadeayo/device_xiaomi_violet
+# https://github.com/Justadeayo/device_xiaomi_violet
