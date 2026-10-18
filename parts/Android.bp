@@ -8,6 +8,7 @@ android_app {
     name: "XiaomiParts",
 
     srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
 
     certificate: "platform",
     platform_apis: true,
@@ -15,10 +16,10 @@ android_app {
 
     static_libs: [
         "org.lineageos.settings.resources",
+        "SettingsLib",
     ],
 
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
-
 }
