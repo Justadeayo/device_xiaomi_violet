@@ -171,11 +171,15 @@ public final class DozeUtils {
         return isGestureEnabled(context, GESTURE_PICK_UP_KEY);
     }
 
-    protected static boolean isHandwaveGestureEnabled(Context context) {
+    public static void launchDozePulse(Context context) {
+        wakeOrLaunchDozePulse(context);
+    }
+
+    public static boolean isHandwaveGestureEnabled(Context context) {
         return isGestureEnabled(context, GESTURE_HAND_WAVE_KEY);
     }
 
-    protected static boolean isPocketGestureEnabled(Context context) {
+    public static boolean isPocketGestureEnabled(Context context) {
         return isGestureEnabled(context, GESTURE_POCKET_KEY);
     }
 
