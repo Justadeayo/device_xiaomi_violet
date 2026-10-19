@@ -97,7 +97,6 @@
         <boolean name="editable_wfc_mode_bool" value="true" />
     </carrier_config>
 
-    </carrier_config>
     <carrier_config mcc="001" mnc="01">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
