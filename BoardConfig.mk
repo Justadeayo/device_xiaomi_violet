@@ -80,7 +80,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 
 TARGET_KERNEL_SOURCE := kernel/xiaomi/violet
-TARGET_KERNEL_CONFIG := vendor/violet-perf_defconfig vendor/debugfs.config
+TARGET_KERNEL_CONFIG := vendor/xcalibur-perf_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
