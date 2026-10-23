@@ -31,6 +31,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # Inherit from dolby
 $(call inherit-product-if-exists, vendor/oneplus/dolby/oplusdolby.mk)
 
+# Include Viper4AndroidFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # API level, the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 28
 
