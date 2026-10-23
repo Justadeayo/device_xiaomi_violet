@@ -12,14 +12,20 @@ LOCAL_OVERRIDES_PACKAGES := \
     Maps \
     MlkitBarcodeUIPrebuilt \
     Photos \
-    PrebuiltBugle \
     PrebuiltGmail \
     PrebuiltDeskClockGoogle_76042511 \
     SafetyHubPrebuilt \
     ScribePrebuilt_v8.7.880674799 \
     SearchSelectorPrebuilt \
     SwitchAccessPrebuilt_1.17.0.877181440 \
-    VisionBarcodePrebuilt
+    VisionBarcodePrebuilt \
+    Velvet \
+    PixelLiveWallpaperPrebuilt-26000013 \
+    WeatherPixelPrebuilt_10006113 \
+    WellbeingPrebuilt \
+    TurboPrebuilt \
+    WallpaperEmojiPrebuilt-foldable-wallpaper \
+    MagicPortraitWallpapers 
 
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := platform
