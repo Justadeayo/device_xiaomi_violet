@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bypass_charging_title">Bypass charging</string>
+    <string name="bypass_charging_summary">Power the device directly from the charger while charging</string>
+    <string name="bypass_charging_description">Bypass charging sends charger power straight to the device, which can reduce heat while charging. Turning it off restores normal charging.</string>
+</resources>

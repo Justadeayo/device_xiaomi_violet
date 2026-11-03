@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/bypass_charging_title">
+
+    <SwitchPreferenceCompat
+        android:key="bypass_charging_pref"
+        android:title="@string/bypass_charging_title"
+        android:summary="@string/bypass_charging_summary"/>
+
+    <com.android.settingslib.widget.FooterPreference
+        android:key="footer_preference"
+        android:title="@string/bypass_charging_description"
+        android:selectable="false" />
+
+</PreferenceScreen>

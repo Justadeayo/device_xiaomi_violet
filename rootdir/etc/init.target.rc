@@ -126,6 +126,10 @@ on boot
     chmod 0660 /sys/class/power_supply/battery/charging_enabled
     chown system system /sys/class/power_supply/battery/charging_enabled
 
+    # Charge limit / bypass (XiaomiParts ChargeLimitService)
+    chmod 0660 /sys/class/power_supply/dc/input_suspend
+    chown system system /sys/class/power_supply/dc/input_suspend
+
     # Touchpanel
     chmod 0664 /sys/devices/virtual/touch/touch_dev/double_tap
     chown system system /sys/devices/virtual/touch/touch_dev/double_tap
