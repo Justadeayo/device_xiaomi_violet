@@ -29,7 +29,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Inherit from dolby
-$(call inherit-product-if-exists, vendor/oneplus/dolby/oplusdolby.mk)
+$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
 
 # API level, the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 28
@@ -77,8 +77,7 @@ ifeq ($(TARGET_USES_DOLBY),true)
 TARGET_USES_CUSTOM_DOLBY_XML := true
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_effects_dolby.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(LOCAL_PATH)/configs/dolby/multimedia_dolby_dax_default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/multimedia_dolby_dax_default.xml
+    $(LOCAL_PATH)/configs/audio/audio_effects_dolby.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
 else
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
@@ -268,13 +267,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
     $(LOCAL_PATH)/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
-ifeq ($(TARGET_USES_DOLBY),true)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/media_codecs_c2_dolby.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
-else
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
-endif
 
 # Network
 PRODUCT_COPY_FILES += \
