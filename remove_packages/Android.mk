@@ -19,13 +19,15 @@ LOCAL_OVERRIDES_PACKAGES := \
     SearchSelectorPrebuilt \
     SwitchAccessPrebuilt_1.17.0.877181440 \
     VisionBarcodePrebuilt \
-    Velvet \
     PixelLiveWallpaperPrebuilt-26000013 \
     WeatherPixelPrebuilt_10006113 \
     WellbeingPrebuilt \
     TurboPrebuilt \
     WallpaperEmojiPrebuilt-foldable-wallpaper \
-    MagicPortraitWallpapers 
+    MagicPortraitWallpapers \
+    PixelWallpapers2025 \
+    UdfpsAnimations \
+    UdfpsIcons
 
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := platform
