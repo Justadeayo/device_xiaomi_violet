@@ -6,10 +6,12 @@
 
 #include "CameraProviderExtension.h"
 
+#include <algorithm>
 #include <fstream>
 
 #define TORCH_BRIGHTNESS "brightness"
 #define TORCH_MAX_BRIGHTNESS "max_brightness"
+#define TORCH_STRENGTH_FILE "/data/vendor/camera/torch_strength"
 #define TOGGLE_SWITCH "/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:switch_2/brightness"
 
 static std::string kTorchLedPaths[] = {
@@ -66,6 +68,11 @@ int32_t getTorchStrengthLevelExt() {
 }
 
 void setTorchStrengthLevelExt(int32_t torchStrength, bool enabled) {
+    // Remember the last picked level so it survives torch off and reboot.
+    int32_t clamped = std::min(torchStrength, getTorchMaxStrengthLevelExt());
+    if (clamped > 0 && clamped != get(TORCH_STRENGTH_FILE, 0)) {
+        set(TORCH_STRENGTH_FILE, clamped);
+    }
     set(TOGGLE_SWITCH, 0);
     for (auto& path : kTorchLedPaths) {
         auto node = path + "/" + TORCH_BRIGHTNESS;
@@ -75,7 +82,18 @@ void setTorchStrengthLevelExt(int32_t torchStrength, bool enabled) {
         set(TOGGLE_SWITCH, 255);
 }
 
+/**
+ * Level the user last set, or the default if none was saved.
+ */
+static int32_t getSavedTorchStrength() {
+    int32_t saved = get(TORCH_STRENGTH_FILE, 0);
+    if (saved <= 0) {
+        return getTorchDefaultStrengthLevelExt();
+    }
+    return std::min(saved, getTorchMaxStrengthLevelExt());
+}
+
 void setTorchModeExt(bool enabled) {
-    int32_t strength = getTorchDefaultStrengthLevelExt();
+    int32_t strength = getSavedTorchStrength();
     setTorchStrengthLevelExt(enabled ? strength : 0, enabled);
 }

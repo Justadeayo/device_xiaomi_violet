@@ -3,3 +3,7 @@ hal_client_domain(cameraserver, hal_motor)
 # Torch
 allow cameraserver sysfs_torch:file rw_file_perms;
 allow cameraserver sysfs_leds:dir r_dir_perms;
+
+# Remember torch strength
+allow cameraserver vendor_camera_data_file:dir create_dir_perms;
+allow cameraserver vendor_camera_data_file:file create_file_perms;
